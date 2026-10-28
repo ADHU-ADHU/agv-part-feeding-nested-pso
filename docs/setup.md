@@ -47,13 +47,15 @@ run_route_pso
 
 This loads only the saved `map` object and runs the original PSO route script. It produces map/route plots, convergence data, and `Final_path` as world-coordinate waypoints. The default PSO route problem is separate from the outer allocator's problem data.
 
-The GA and DE files can be run with `map` already loaded:
+For the PSO/GA/DE convergence comparison, run all three in the same MATLAB workspace, starting with PSO:
 
 ```matlab
+run_route_pso
 run('src/routing/Genetic_algorithm_8loc_pic_drop.m')
-% Or, in a separate run:
 run('src/routing/Differential_evolution_8loc_.m')
 ```
+
+The scripts retain the histories `sabest_value` (PSO), `gabest_value` (GA), and `dabest_value` (DE). The DE script's final combined plot reads all three, so the PSO and GA histories must already exist. Each script also visualizes its planned route.
 
 Match demand, return-to-start behavior, stopping budgets, and random seeds before drawing algorithm comparisons. In the supplied versions, GA/DE use the full demand matrix and include a return leg; PSO uses a subset and omits that leg.
 
