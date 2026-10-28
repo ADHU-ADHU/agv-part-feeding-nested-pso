@@ -2,11 +2,11 @@
 
 Assembly-line material delivery with a capacity-constrained automated guided vehicle. The main MATLAB implementation uses **two particle swarm optimizers**: an outer PSO assigns parts to trips, and an inner PSO chooses pickup and delivery order for each candidate trip.
 
-The project also includes occupancy-grid routing with **PSO and A***, GA/DE routing alternatives, and a supporting Simulink robot simulation.
+The project also includes a simple evaluation of **Particle Swarm Optimization (PSO)**, **Differential Evolution (DE)**, and **Genetic Algorithm (GA)** for route optimization, alongside occupancy-grid A* path planning and a supporting Simulink robot simulation.
 
 **Stack:** MATLAB · Particle Swarm Optimization · A* · Occupancy Grids · Simulink
 
-[Main optimizer](src/nested_pso/) · [Routing demos](src/routing/) · [Setup](docs/setup.md) · [Implementation notes](docs/implementation-notes.md)
+[Main optimizer](src/nested_pso/) · [Algorithm evaluation](#pso-de-and-ga-evaluation) · [Setup](docs/setup.md) · [Implementation notes](docs/implementation-notes.md)
 
 ## The delivery problem
 
@@ -68,11 +68,23 @@ The separate [PSO routing script](src/routing/Swarm_Optimisation_8loc_pick_drop.
 
 This demo has its own hardcoded material allocation. It does **not** automatically import the nested optimizer's selected trip tensor. A* supplies obstacle-aware legs between service locations; PSO chooses the service order.
 
-GA and differential-evolution alternatives are included alongside PSO. Their supplied demand and return-leg settings differ, so their default outputs are not a controlled algorithm benchmark.
-
 [![Distance-based and load-weighted route examples](docs/assets/route-cost-comparison.png)](docs/assets/route-cost-comparison.png)
 
 *Historical project visualization: shortest-distance ordering on the left and load-weighted transport-cost ordering on the right. Carrying different materials changes which visit order is preferred.*
+
+## PSO, DE and GA evaluation
+
+A simple evaluation compares **Particle Swarm Optimization**, **Differential Evolution**, and **Genetic Algorithm** for pickup and delivery route ordering. The implementations record route-cost convergence across iterations or generations and visualize their resulting A* routes on the occupancy grid.
+
+| Algorithm | Implementation | Convergence history |
+| --- | --- | --- |
+| Particle Swarm Optimization (PSO) | [PSO route optimizer](src/routing/Swarm_Optimisation_8loc_pick_drop.m) | `sabest_value` |
+| Differential Evolution (DE) | [DE route optimizer](src/routing/Differential_evolution_8loc_.m) | `dabest_value` |
+| Genetic Algorithm (GA) | [GA route optimizer](src/routing/Genetic_algorithm_8loc_pic_drop.m) | `gabest_value` |
+
+The DE script includes a combined convergence plot of all three histories. Run PSO, then GA, then DE in the same MATLAB workspace to populate the comparison data; see the [execution guide](docs/setup.md#separate-map-based-routing-demo).
+
+These experiments complement the main nested-PSO allocation approach. The supplied script versions use different demand, return-leg, and random-seed settings, so the default outputs are exploratory comparisons. Match those settings before reproducing a controlled quantitative benchmark.
 
 ## Project visuals
 
