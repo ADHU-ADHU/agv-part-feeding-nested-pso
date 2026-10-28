@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "source_root": "Submitted codes codes(route and tour allocation)/codes",
+  "description": "Original submitted project files copied byte-for-byte; SHA-256 covers the original file bytes. Runner scripts and repository documentation are not original source files and are not listed here.",
+  "files": [
+    {
+      "source": "Touroptimizastion2/with_tour_optimization_diffstyle2.m",
+      "destination": "src/nested_pso/with_tour_optimization_diffstyle2.m",
+      "sha256": "356cf50f7a37dc09d631266cfe117515b95344c26168c6ed4901f4153f221a70",
+      "size_bytes": 9568
+    },
+    {
+      "source": "Touroptimizastion2/Seq_dis_function2.m",
+      "destination": "src/nested_pso/Seq_dis_function2.m",
+      "sha256": "ddc28759b3872a48c5f4149d8ad8e6b6639f7ed44f4fb6444011d4bf389cd151",
+      "size_bytes": 6914
+    },
+    {
+      "source": "Optimal_path/Swarm_Optimisation_8loc_pick_drop.m",
+      "destination": "src/routing/Swarm_Optimisation_8loc_pick_drop.m",
+      "sha256": "04ca5f105a70ea19c931afdfc1635c326a7c74c7361f63512acb72e941f08333",
+      "size_bytes": 16754
+    },
+    {
+      "source": "Optimal_path/Genetic_algorithm_8loc_pic_drop.m",
+      "destination": "src/routing/Genetic_algorithm_8loc_pic_drop.m",
+      "sha256": "d8157f28d915383af253d651a6d086dac6218d9d0c338c5a5493112e9d9fdb8f",
+      "size_bytes": 17662
+    },
+    {
+      "source": "Optimal_path/Differential_evolution_8loc_.m",
+      "destination": "src/routing/Differential_evolution_8loc_.m",
+      "sha256": "6764058b51240d021d1420530dc139606778695d4f12aa6e19002bb46f5279c4",
+      "size_bytes": 15931
+    },
+    {
+      "source": "Slam_astar_simulation/AGV_Simulation_Follow.slx",
+      "destination": "simulation/AGV_Simulation_Follow.slx",
+      "sha256": "11cea81b195a2656328aaae95abaf3eaa0570d40bf3c885add2e093dfb1c9dd1",
+      "size_bytes": 142991
+    },
+    {
+      "source": "Slam_astar_simulation/Scenario.x3d",
+      "destination": "simulation/Scenario.x3d",
+      "sha256": "f17a1a8ed7fbbe7f6537aeff1f36c92c0cb213d1a2bf479fd5b26752d606689d",
+      "size_bytes": 61935
+    },
+    {
+      "source": "Slam_astar_simulation/ScenarioTemplate.x3d",
+      "destination": "simulation/ScenarioTemplate.x3d",
+      "sha256": "f650a541fbe54e8d823b18bd8c6093518e7b80ac17940564b610e1ce51fe221a",
+      "size_bytes": 46780
+    },
+    {
+      "source": "Slam_astar_simulation/Maze_Creator.m",
+      "destination": "simulation/Maze_Creator.m",
+      "sha256": "ae16ca1596cd57572dcafdfab6088a505f6594b8cebc3b3d707154d05c71888a",
+      "size_bytes": 3298
+    },
+    {
+      "source": "Slam_astar_simulation/texture/Brick_2.jpg",
+      "destination": "simulation/texture/Brick_2.jpg",
+      "sha256": "fd791c3abe3efb187569d697ed292e8c4c22cd26ef89ff578a90eb03799de5ae",
+      "size_bytes": 6066
+    },
+    {
+      "source": "Slam_Maps/Full_perfect_slam_map/Full_perfect_OCC_grid_workspace.mat",
+      "destination": "data/Full_perfect_OCC_grid_workspace.mat",
+      "sha256": "c7b03e0a30e4e4990c697858582cdd21871ffc8fbc2bf7eee552f103236f239e",
+      "size_bytes": 17224811
+    }
+  ]
+}

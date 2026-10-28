@@ -1,0 +1,19 @@
+# MATLAB/Simulink generated outputs
+slprj/
+*.slxc
+*.asv
+*.autosave
+*.bak
+*.mex*
+codegen/
+out*.mat
+
+# Local environment and editor files
+.env
+.env.*
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
